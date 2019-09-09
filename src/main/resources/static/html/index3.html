@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>爱笑的眼睛</title>
+	<EMBED src="../music/eye2.mp3" autostart="true" loop="true" width="1" height="1">
+<link type="text/css" href="maolaoshifu.css" rel="stylesheet"/>
+
+	<style type="text/css">
+		#show{border:1px solid #E53941;width:400px;height:35px;}
+		.arktitle {            font-size: 18px;            font-weight: bold;            line-height: 80px;            background: linear-gradient(to right, red, blue);            -webkit-background-clip: text;            color: transparent;            animation: blink 2s linear infinite;            -webkit-animation: blink 2s linear infinite;            -moz-animation: blink 2s linear infinite;            -ms-animation: blink 2s linear infinite;            -o-animation: blink 2s linear infinite;          } @keyframes blink{            0%{opacity: 1;}            50%{opacity: 0.5;}            100%{opacity: 0.8;}          }          @-webkit-keyframes blink {            0% { opacity: 1; }            50%{ opacity: 0.5;}            100% { opacity: 0.8; }          }          @-moz-keyframes blink {            0% { opacity: 1; }            50%{ opacity: 0.5; }            100% { opacity: 0.8; }          }          @-ms-keyframes blink {            0% { opacity: 1; }            50%{ opacity: 0.5; }            100% { opacity: 0.8;}          }          @-o-keyframes blink {            0% { opacity: 1; }            50%{ opacity: 0.5; }            100% { opacity: 0.8; }          }
+
+	</style>
+	<script language="javascript">
+		var content = document.getElementById('geci');
+
+        i   = 0;
+        str = "";
+        function type(){
+            str += text[i] + "<br>";
+            txt.innerHTML = str;
+            i++;
+            if (i>=text.length)i=0;
+            setTimeout("type()",500);
+        }
+
+	</script>
+</head>
+<body>
+<div class="mao_box">
+	<div class="mao">
+		<div class="mao_head">
+			<div class="huawen">
+				<div><!--头部花纹——左边橙色--></div>
+			</div>
+		</div>
+		<div class="erduo">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="yanjing">
+			<div>
+				<div class="yanquan">
+					<div></div>
+				</div>
+				<div class="yanquan_hedding">
+
+				</div>
+				<div class="hong"></div>
+			</div>
+			<div class="yan_right">
+				<div class="yanquan">
+					<div></div>
+				</div>
+				<div class="yanquan_hedding">
+
+				</div>
+				<div class="hong"></div>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		<div class="face_huawen">
+			<div class="face_huawen_huawen huawen_left">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+
+			</div>
+			<div class="face_huawen_huawen huawen_right">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		<div class="bizi">
+			<div ></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="zuiba_box">
+			<div class="zuiba">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div style="height: 20px"></div>
+		<div style="text-align: center" class="arktitle">用鼠标触碰我 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;我就笑给你看</div>
+		<div id = "geci" class="arktitle"></div>
+	</div>
+
+</div>
+ 
+<br><br><br><br><br>
+
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+<pre id="aa"></pre>
+
+
+<script language="javascript">
+    var geci = document.getElementById('geci');
+    function text(){
+        for(var i=0;i<3;i++){
+            var j=0;
+            var text = new Array("这爱的城市虽然拥挤","如果真的遇见你", "你不必讶异， 我的笑她无法代替");
+            setTimeout(function(){
+                var p = document.createElement('p');
+                p.innerText = text[j++];
+                geci.append(p)
+            },i*5500)
+        }
+    }
+    text()
+    window.onload=function(){
+        var story = document.getElementById('sto');
+        var s = document.getElementById('show');
+        var a = story.innerHTML.slice("");
+        var i = 0;
+        timer=setInterval(function(){
+            s.innerHTML=story.innerHTML.substring(0,i)
+            i++;
+            if(s.innerHTML==story.innerHTML){clearInterval(timer);};
+        },500);
+    }
+
+</script>
+
+</body>
+</html>

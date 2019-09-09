@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>超绚丽CSS3多色彩发光立方体旋转动画DEMO演示</title>
+           <EMBED src="../music/3.mp3" autostart="true" loop="true" width="0" height="0">
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.world {
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  width: 100vh;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cube {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  width: 50vh;
+  height: 50vh;
+  position: relative;
+  -webkit-animation: rotator 4.5s linear infinite;
+          animation: rotator 4.5s linear infinite;
+  outline: 0;
+}
+.cube * {
+  background: #000;
+  box-shadow: 0 0 3vh currentColor;
+  -webkit-transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+.cube:hover * {
+  background: currentColor;
+  box-shadow: 0 0 20vh currentColor;
+}
+.cube .cube__front {
+  color: deeppink;
+  -webkit-transform: translateZ(25vh);
+          transform: translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cube .cube__right {
+  color: lightcoral;
+  -webkit-transform: rotateY(90deg) translateZ(25vh);
+          transform: rotateY(90deg) translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cube .cube__left {
+  color: skyblue;
+  -webkit-transform: rotateY(270deg) translateZ(25vh);
+          transform: rotateY(270deg) translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cube .cube__back {
+  color: seagreen;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateY(180deg) translateZ(25vh);
+          transform: rotateY(180deg) translateZ(25vh);
+}
+.cube .cube__top {
+  color: mediumseagreen;
+  -webkit-transform: rotateX(90deg) translateZ(25vh);
+          transform: rotateX(90deg) translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cube .cube__bottom {
+  color: dodgerblue;
+  -webkit-transform: rotateX(270deg) translateZ(25vh);
+          transform: rotateX(270deg) translateZ(25vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes rotator {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.arktitle {            font-size: 25px;            font-weight: bold;            line-height: 80px;            background: linear-gradient(to right, red, blue);            -webkit-background-clip: text;            color: transparent;            animation: blink 2s linear infinite;            -webkit-animation: blink 2s linear infinite;            -moz-animation: blink 2s linear infinite;            -ms-animation: blink 2s linear infinite;            -o-animation: blink 2s linear infinite;          } @keyframes blink{            0%{opacity: 1;}            50%{opacity: 0.5;}            100%{opacity: 0.8;}          }          @-webkit-keyframes blink {            0% { opacity: 1; }            50%{ opacity: 0.5;}            100% { opacity: 0.8; }          }          @-moz-keyframes blink {            0% { opacity: 1; }            50%{ opacity: 0.5; }            100% { opacity: 0.8; }          }          @-ms-keyframes blink {            0% { opacity: 1; }            50%{ opacity: 0.5; }            100% { opacity: 0.8;}          }          @-o-keyframes blink {            0% { opacity: 1; }            50%{ opacity: 0.5; }            100% { opacity: 0.8; }          }
+
+.box{
+  font-size: 20px;
+  color:#4cc134;
+  margin: 10px;
+  animation: changeshadow 1s  ease-in  infinite ;
+  /* 其它浏览器兼容性前缀 */
+  -webkit-animation: changeshadow 1s linear infinite;
+  -moz-animation: changeshadow 1s linear infinite;
+  -ms-animation: changeshadow 1s linear infinite;
+  -o-animation: changeshadow 1s linear infinite;
+}
+@keyframes changeshadow {
+  0%{ text-shadow: 0 0 4px #4cc134}
+  50%{ text-shadow: 0 0 40px #4cc134}
+  100%{ text-shadow: 0 0 4px #4cc134}
+}
+/* 添加兼容性前缀 */
+@-webkit-keyframes changeshadow {
+  0%{ text-shadow: 0 0 4px #4cc134}
+  50%{ text-shadow: 0 0 40px #4cc134}
+  100%{ text-shadow: 0 0 4px #4cc134}
+}
+@-moz-keyframes changeshadow {
+  0%{ text-shadow: 0 0 4px #4cc134}
+  50%{ text-shadow: 0 0 40px #4cc134}
+  100%{ text-shadow: 0 0 4px #4cc134}
+}
+@-ms-keyframes changeshadow {
+  0%{ text-shadow: 0 0 4px #4cc134}
+  50%{ text-shadow: 0 0 40px #4cc134}
+  100%{ text-shadow: 0 0 4px #4cc134}
+}
+@-o-keyframes changeshadow {
+  0%{ text-shadow: 0 0 4px #4cc134}
+  50%{ text-shadow: 0 0 40px #4cc134}
+  100%{ text-shadow: 0 0 4px #4cc134}
+}
+
+  </style>
+</head>
+<body>
+
+<div>
+  <h5 style="color: white;font-size: 15px">操作提示:<br><br>
+    请使用鼠标触碰正方体
+  </h5>
+  <h5 class="arktitle">靠近你的人都会被你照亮！<br>
+    严于律己，甜以待人!<br>让自己的人生光芒四射!
+  </h5>
+</div>
+
+<div class="world">
+  <div class="cube" tabindex="0">
+    <div class="cube__front"></div>
+    <div class="cube__back"></div>
+    <div class="cube__left"></div>
+    <div class="cube__right"></div>
+    <div class="cube__top"></div>
+    <div class="cube__bottom"></div>
+  </div>
+</div>
+</body>
+</html>
